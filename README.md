@@ -29,12 +29,12 @@ Submissions will be accepted until Monday at 8am. No late work allowed.
 * _open "portfolio" folder_
 * _open index.html_
 
-## gh-pages link
+## Link
 [Portfolio - click here](http://rawgit.com/dlopez6877/portfolio-redux/master/index.html)
 
 ## Support and contact details
 
-_E-mail dlopez6877@gmail.com_
+_E-mail DLopez6877@gmail.com_
 
 ## Technologies Used
 
