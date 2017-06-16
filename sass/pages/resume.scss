@@ -1,0 +1,144 @@
+html {
+  background-color: #12C8F5;
+}
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tab {
+  transition: all 1s;
+}
+
+h1 {
+  font-size: 7vmin;
+}
+h2 {
+  font-size: 6vmin;
+}
+h3 {
+  font-size: 5vmin;
+}
+h4 {
+  font-size: 4vmin
+}
+h5 {
+  font-size: 3vmin;
+}
+p {
+  font-size: 2vmin;
+}
+
+/*/////////////////              HEADER              /////////////////*/
+header h1 {
+  position: absolute;
+  top: 2vh;
+  left: 16%;
+  font-family: 'Bungee Shade', sans-serif;
+  text-shadow: 1px 1px 4px white;
+  font-size: 4vmax;
+}
+
+header h1::before {
+  content: "D ";
+}
+
+/*/////////////////              TABS              /////////////////*/
+
+/*/////////////////              SKILLS              /////////////////*/
+
+#skills {
+  height: 7vh;
+  width: 14vw;
+  position: absolute;
+  background-color:#ffff85;
+  top: 70vh;
+  left: 5vw;
+}
+
+.ball {
+  border: 10px dotted black;
+  width: 5vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  transition: all 5s;
+  transition-timing-function: ease-in-out;
+  box-sizing: border-box;
+}
+
+#skills:hover {
+  height: 67vh;
+  width: 80vw;
+  z-index: 5;
+  top: 20vh;
+}
+
+#skills:hover > .ball {
+  width: 20%;
+  left: 80%;
+  transform: rotate(3600deg);
+}
+
+/*/////////////////              ABOUT              /////////////////*/
+#about {
+  height: 30vh;
+  width: 70%;
+  position: absolute;
+  background-color: #9c3b9c;
+  top: 20%;
+  left: 10%;
+  z-index: -1;
+  text-align: right;
+  color: #9c3b9c;
+}
+
+#about .wrapper {
+  border: thick solid #9c3b9c;
+  padding: 10px;
+  background: #ea2f00;
+}
+
+#about h3 {
+  float: left;
+  transform: rotate(-90deg);
+  letter-spacing: 5px;
+  font-family: orbitron;
+  transform-origin: 14px;
+  margin: 22vh 0 0 0;
+  padding-right: 300px;
+  color: white;
+  border-bottom: thick solid #9c3b9c;
+}
+
+#about h2 {
+  float: right;
+}
+
+#about:hover {
+  z-index: 1;
+  top: 22%;
+  height: 70vh;
+  font-size: 2rem;
+}
+
+/*/////////////////              COVER              /////////////////*/
+#cover {
+  position: absolute;
+  top: 13.25vh;
+  left: 15vw;
+  height: 73.235vh;
+  text-align: center;
+  width: 70vw;
+  background: white;
+  font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+#cover img {
+  height: 10vh;
+  margin-top: 5vh;
+}
