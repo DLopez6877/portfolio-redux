@@ -30,7 +30,7 @@ Submissions will be accepted until Monday at 8am. No late work allowed.
 * _open index.html_
 
 ## gh-pages link
-[Portfolio - click here](http://rawgit.com/dlopez6877/portfolio/master/index.html)
+[Portfolio - click here](http://rawgit.com/dlopez6877/portfolio-redux/master/index.html)
 
 ## Support and contact details
 
