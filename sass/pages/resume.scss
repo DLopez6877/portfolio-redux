@@ -1,3 +1,6 @@
+@import
+  "../crosspage/main";
+  
 html {
   background-color: #12C8F5;
 }
@@ -141,4 +144,55 @@ header h1::before {
 #cover img {
   height: 10vh;
   margin-top: 5vh;
+}
+
+/*/////////////////              MEDIA              /////////////////*/
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) and (orientation : landscape) {
+/* Styles */
+  html{
+    background-color: blue;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) and (orientation : portrait) {
+  html{
+    background-color: red;
+  }
+}
+
+/* Smartphones Large (landscape) */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape){
+  html{
+    background-color: #dcdc00;
+  }
+}
+
+/* Smartphones Large (portrait) */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait){
+  html{
+    background-color: orange;
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  html{
+    background-color: pink;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  html{
+    background-color: purple;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+  html{
+    background-color: green;
+  }
 }
