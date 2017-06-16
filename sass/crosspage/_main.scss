@@ -2,6 +2,22 @@
   'crosspage/abstracts/z-abstracts-main',
   'crosspage/components/z-components-main';
 
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Open Sans';
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a, a:link, a:visited, a:hover {
+  color: rebeccapurple;
+  text-decoration: none;
 }

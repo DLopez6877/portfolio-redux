@@ -1,2 +1,55 @@
 @import
   "../crosspage/main";
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background: #99d;
+  aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  main {
+    flex: 3;
+  }
+}
+.sidebar {
+  background: inherit;
+  nav {
+    ul {
+      background-color: lightblue;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      li {
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.link {
+  min-width: 200px;
+  min-height: 200px;
+  background: lightyellow;
+  margin: 10px 0;
+}
+
+main {
+  background: #dad;
+  display: flex;
+  flex-direction: column;
+}
+
+.jumbotron {
+  background-color: navajowhite;
+  display: flex;
+  h1 {
+    margin: auto;
+    font-size: 4em;
+    font-family: 'Montserrat Subrayada', serif;
+    line-height: 2.5;
+  }
+}
