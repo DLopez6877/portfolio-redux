@@ -1,6 +1,6 @@
 @import
   "../crosspage/main";
-  
+
 html {
   background-color: #12C8F5;
 }
@@ -41,7 +41,7 @@ header h1 {
   top: 2vh;
   left: 16%;
   font-family: 'Bungee Shade', sans-serif;
-  text-shadow: 1px 1px 4px white;
+  text-shadow: 2px 1px 1px #ddd, 2px -2px 4px #fff;
   font-size: 4vmax;
 }
 
@@ -110,7 +110,7 @@ header h1::before {
   float: left;
   transform: rotate(-90deg);
   letter-spacing: 5px;
-  font-family: orbitron;
+  font-family: 'Orbitron';
   transform-origin: 14px;
   margin: 22vh 0 0 0;
   padding-right: 300px;
@@ -151,7 +151,7 @@ header h1::before {
 @media only screen and (min-width : 321px) and (orientation : landscape) {
 /* Styles */
   html{
-    background-color: blue;
+    background-color: rebeccapurple;
   }
 }
 

@@ -1,0 +1,11 @@
+.testnav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  a, a:visited {
+    color: lightblue;
+  }
+  a:hover {
+    color: red;
+  }
+}
