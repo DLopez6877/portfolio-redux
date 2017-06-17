@@ -1,55 +1,154 @@
 @import
   "../crosspage/main";
 
+$breakpoints: (
+  'x-small': (min-width: 415px),
+  'small': (min-width: 660px),
+  'medium': (min-width: 800px),
+  'large': (min-width: 1100px),
+  'x-large': (min-width: 1470px),
+);
+
 .container {
-  display: flex;
-  min-height: 100vh;
-  background: #99d;
-  aside {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-  }
-  main {
-    flex: 3;
-  }
-}
-.sidebar {
-  background: inherit;
-  nav {
-    ul {
-      background-color: lightblue;
-      display: flex;
-      flex-direction: column;
-      padding: 10px;
-      li {
-        padding: 5px;
-      }
-    }
-  }
-}
-
-.link {
-  min-width: 200px;
-  min-height: 200px;
-  background: lightyellow;
-  margin: 10px 0;
-}
-
-main {
-  background: #dad;
   display: flex;
   flex-direction: column;
 }
 
 .jumbotron {
-  background-color: navajowhite;
+  text-align: center;
+  background: lightpink;
+}
+
+aside {
+  display: none;
+}
+
+main {
   display: flex;
-  h1 {
-    margin: auto;
-    font-size: 4em;
-    font-family: 'Montserrat Subrayada', serif;
-    line-height: 2.5;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightyellow;
+  .feature {
+    margin-top: 25px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    justify-content: center;
+    &:last-of-type {
+      margin-bottom: 25px;
+    }
+    &:nth-child(odd) {
+      transform: translateX(-5%);
+    }
+    &:nth-child(even) {
+      transform: translateX(5%);
+    }
+    img {
+      width: 80%;
+    }
+    .feature-text{
+      position: absolute;
+      width: 80%;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
+
+// .container {
+//   display: flex;
+//   background: #99d;
+//   aside {
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//     margin: 10px;
+//   }
+//   main {
+//     flex: 3;
+//   }
+// }
+// .sidebar {
+//   background: inherit;
+//   nav {
+//     ul {
+//       background-color: lightblue;
+//       display: flex;
+//       flex-direction: column;
+//       padding: 10px;
+//       li {
+//         padding: 5px;
+//       }
+//     }
+//   }
+// }
+//
+// .link {
+//   min-height: 200px;
+//   background: lightyellow;
+//   margin: 10px 0;
+// }
+//
+// main {
+//   background: #dad;
+//   display: flex;
+//   flex-direction: column;
+//   height: 100vh;
+// }
+//
+// .jumbotron {
+//   background-color: navajowhite;
+//   display: flex;
+//   flex: 1;
+//   h1 {
+//     margin: auto;
+//     font-size: 8vw;
+//     font-family: 'Montserrat Subrayada', serif;
+//   }
+// }
+//
+// .features {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   overflow-x: hidden;
+//   flex: 6;
+// }
+//
+// .feature {
+//   max-width: 850px;
+//   height: 30vh;
+//   margin-bottom: 32vh;
+//   display: flex;
+//   align-items: center;
+//   position: relative;
+//   &:nth-child(odd) {
+//     .feature-text {
+//       transform: translateX(-50%);
+//     }
+//   }
+//   &:nth-child(even) {
+//     flex-direction: row-reverse;
+//     .feature-text {
+//       transform: translateX(50%);
+//     }
+//   }
+//   &:last-child {
+//     margin-bottom: 2vh;
+//   }
+//   img {
+//     height: 30vh;
+//   }
+//   .feature-text {
+//     text-align: center;
+//   }
+//   h2 {
+//     font-size: 3.5vmax;
+//   }
+//   p {
+//     font-size: 1.5vmax;
+//   }
+// }
