@@ -1,0 +1,7 @@
+@mixin blend-bg-img($url) {
+  background: linear-gradient(darken($primary-color, 30%), lighten($primary-color, 30%)),
+  url($url) no-repeat;
+  background-blend-mode: color;
+  background-size: cover;
+  background-position: center;
+}

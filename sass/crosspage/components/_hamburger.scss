@@ -9,7 +9,7 @@
 .hamburger .line {
   width: 30px;
   height: 3px;
-  background-color: $primary-color;
+  background-color: darken($primary-color, 15%);
   display: block;
   margin: 8px auto;
   -webkit-transition: all 0.3s ease-in-out;
@@ -21,7 +21,7 @@
   cursor: pointer;
 }
 
-#hamburger-6.is-active {
+#hamburger.is-active {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -34,25 +34,25 @@
   transform: rotate(45deg);
 }
 
-#hamburger-6.is-active .line:nth-child(2){
+#hamburger.is-active .line:nth-child(2){
   width: 0px;
 }
 
-#hamburger-6.is-active .line:nth-child(1),
-#hamburger-6.is-active .line:nth-child(3){
+#hamburger.is-active .line:nth-child(1),
+#hamburger.is-active .line:nth-child(3){
   -webkit-transition-delay: 0.3s;
   -o-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
 
-#hamburger-6.is-active .line:nth-child(1){
+#hamburger.is-active .line:nth-child(1){
   -webkit-transform: translateY(10px);
   -ms-transform: translateY(10px);
   -o-transform: translateY(10px);
   transform: translateY(10px);
 }
 
-#hamburger-6.is-active .line:nth-child(3){
+#hamburger.is-active .line:nth-child(3){
   -webkit-transform: translateY(-13px) rotate(90deg);
   -ms-transform: translateY(-13px) rotate(90deg);
   -o-transform: translateY(-13px) rotate(90deg);

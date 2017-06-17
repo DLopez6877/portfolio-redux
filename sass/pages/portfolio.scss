@@ -1,62 +1,28 @@
 @import
   "../crosspage/main";
 
-$breakpoints: (
-  'x-small': (min-width: 415px),
-  'small': (min-width: 660px),
-  'medium': (min-width: 800px),
-  'large': (min-width: 1100px),
-  'x-large': (min-width: 1470px),
-);
-
 .container {
   display: flex;
   flex-direction: column;
+  color: $primary-color;
 }
 
 .jumbotron {
   text-align: center;
-  background: lightpink;
+  background: darken($primary-color, 10%);
+  font-family: 'Montserrat Subrayada';
+  color: lighten($primary-color, 50%);
+  h1 {
+    font-size: 3em;
+    padding: .5em 0;
+  }
 }
 
 aside {
   display: none;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: lightyellow;
-  .feature {
-    margin-top: 25px;
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    justify-content: center;
-    &:last-of-type {
-      margin-bottom: 25px;
-    }
-    &:nth-child(odd) {
-      transform: translateX(-5%);
-    }
-    &:nth-child(even) {
-      transform: translateX(5%);
-    }
-    img {
-      width: 80%;
-    }
-    .feature-text{
-      position: absolute;
-      width: 80%;
-      text-align: center;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-}
+
 
 // .container {
 //   display: flex;

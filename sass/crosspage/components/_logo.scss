@@ -1,12 +1,12 @@
 .logo {
-  background: #dd9;
+  background: lighten($primary-color, 40%);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 10px;
   p {
     font-family: 'Tangerine Bold', fantasy;
     font-size: 30px;
-    color: $primary-color;
+    color: darken($primary-color, 15%)
   }
 }
