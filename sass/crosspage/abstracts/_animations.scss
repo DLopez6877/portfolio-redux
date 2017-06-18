@@ -45,6 +45,26 @@
   }
 }
 
+@keyframes right-triangle-media {
+  0% {
+    opacity: 0;
+    bottom: -20%;
+    right: -100%;
+    transform: rotate(120deg) skewX(10deg) scale(2.5);
+  }
+  30%, 70% {
+    opacity: .5;
+    bottom: -30%;
+    right: -5%;
+    transform: rotate(120deg) skewX(10deg) scale(2.5);
+  }
+  100% {
+    opacity: 1;
+    bottom: -60%;
+    right: -70%;
+    transform: rotate(120deg) skewX(10deg) scale(1);
+  }
+}
 
 @keyframes left-triangle-enter {
   0% {

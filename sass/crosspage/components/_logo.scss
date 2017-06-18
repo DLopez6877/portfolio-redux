@@ -6,6 +6,7 @@
   padding: 10px 10px;
   border-bottom: 4px solid darken($secondary-color, 10%);
   position: relative;
+  order: 2;
   &::after {
     content: "";
     width: 100%;
@@ -18,5 +19,12 @@
     font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 30px;
     color: darken($secondary-color, 15%);
+    @include respond-to('large') {
+      font-size: 3.5vw;
+      margin: auto;
+    };
   }
+  @include respond-to('large') {
+    min-height: 19vh;
+  };
 }

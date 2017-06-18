@@ -1,4 +1,17 @@
+function checkSize(){
+    if ($(window).width() >= 999 && $('.js-wrap').parent().is('.container')) {
+        $('.js-wrap').wrapAll("<div class='new' />");
+        $('.js-wrap2').wrapAll("<div class='new2' />");
+    } else if ($(window).width() < 999 && $('.js-wrap').parent().is('.new')) {
+      $('.js-wrap').unwrap();
+      $('.js-wrap2').unwrap();
+    }
+}
+
+// user interface logic below this line
+
 $(document).ready(function(){
+  // hamburger
   $(".hamburger").click(function(){
     $(this).toggleClass("is-active");
     if ($(this).hasClass("is-active")) {
@@ -7,6 +20,7 @@ $(document).ready(function(){
       $('aside').css('left', '-50%');
     }
   });
+  // gradient timing functions
   $('.img-gradient')
   .delay(3000)
   .queue(function (next) {
@@ -18,10 +32,10 @@ $(document).ready(function(){
       $(this).animate({'opacity': 1}, 1500);
     });
   }, 4000);
-  // $('.js-img-gradient')
-  // .delay(4000)
-  // .queue(function (next) {
-  //   $(this).css('z-index', '-1');
-  //   next();
-  // });
+  // wrap logo and sidebar at width 1000px
+  checkSize();
+
+  $(window).resize(function() {
+      checkSize();
+  });
 });

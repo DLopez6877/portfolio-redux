@@ -10,6 +10,9 @@ body {
   color: $primary-color;
   overflow: hidden;
   padding-bottom: 200px;
+  @include respond-to('large') {
+    flex-direction: row-reverse;
+  };
 }
 
 .jumbotron {
@@ -17,10 +20,16 @@ body {
   background: darken($primary-color, 10%);
   font-family: 'Bungee Shade';
   color: lighten($primary-color, 50%);
+  order: 1;
+  display: flex;
   h1 {
     font-size: 3em;
     padding: .5em 0;
+    margin: auto;
   }
+  @include respond-to('large') {
+    min-height: 20vh;
+  };
 }
 
 aside {
@@ -33,14 +42,24 @@ aside {
   background-color: lighten(rgba($red2, $green2, $blue2, .9), 46%);
   z-index: 100;
   overflow: hidden;
+  @include respond-to('large'){
+    position: static;
+    width: 100%;
+  };
   ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 100vh;
+    @include respond-to('large') {
+      height: auto;
+    };
     li:nth-child(odd) {
       align-self: flex-start;
       transform: rotate(45deg);
+      @include respond-to('large') {
+        transform: none;
+      };
       @media screen and (max-height: 750px) {
         transform: rotate(0deg);
       }
@@ -48,6 +67,10 @@ aside {
     li:nth-child(even) {
       transform: rotate(-45deg);
       align-self: flex-end;
+      @include respond-to('large') {
+        transform: none;
+        align-self: flex-start;
+      };
     }
     li {
       transition: transform .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -57,9 +80,12 @@ aside {
     }
     a:link, a:visited {
       font-size:11vw;
-      padding: 5px 300px;
-      margin: 0 -300px;
+      padding: 5px 500px;
+      margin: 0 -500px;
       background-color: rgba($red, $green, $blue, .1);
+      @include respond-to('small') {
+        font-size: 8vw;
+      };
     }
     a:hover {
       color: lighten($primary-color, 10%);
@@ -73,10 +99,14 @@ aside {
     content: "";
     position: absolute;
     opacity: 0;
+    pointer-events: none;
   }
   &::after {
     @include triangle(20vw, rgba($red,$green,$blue,0.3));
     animation: right-triangle-enter 5s ease-in-out 1s normal forwards;
+    @include respond-to('small') {
+      animation: right-triangle-media 5s ease-in-out 1s normal forwards;
+    };
   }
   &::before {
     @include triangle(50vw, rgba($red2,$green2,$blue2,0.3));
@@ -92,6 +122,7 @@ aside {
     content: "";
     position: absolute;
     opacity: 0;
+    pointer-events: none;
   }
   &::after {
     @include triangle(20vw, rgba($red,$green,$blue,0.1));
@@ -104,11 +135,12 @@ aside {
 }
 
 footer{
-  margin-top: -50px;
   background-color: darken($primary-color, 10%);
   height: 100px;
   text-align: center;
   transform: skewY(-7deg);
+  order: 4;
+  margin-top: -100px;
   img {
     width: 28px;
     padding: 10px 5px;
@@ -125,4 +157,17 @@ footer{
       transform: scale(.8);
     }
   }
+}
+
+// added divs from js
+.new {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+
+.new2 {
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1;
 }
