@@ -38,7 +38,8 @@
     }
   }
   a:hover > .img-gradient > img {
-    z-index: 0 !important;
+    z-index: 30 !important;
+    box-shadow: 0 0 30px $secondary-color;
   }
 }
 

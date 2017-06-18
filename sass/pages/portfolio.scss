@@ -24,22 +24,25 @@ body {
 }
 
 aside {
-  transition: left .5s cubic-bezier(1,.24,.23,1);
+  transition: left .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   position: fixed;
   top: 0;
   left: -50%;
   width: 50%;
   height: 100%;
-  background-color: lighten(rgba($red2, $green2, $blue2, .8), 50%);
+  background-color: lighten(rgba($red2, $green2, $blue2, .7), 46%);
   z-index: 100;
   ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 100vh;
-    text-align: center;
     li:nth-child(odd) {
+      align-self: flex-start;
       transform: rotate(45deg);
+      @media screen and (max-height: 750px) {
+        transform: rotate(0deg);
+      }
     }
     li:nth-child(even) {
       transform: rotate(-45deg);
@@ -49,12 +52,14 @@ aside {
       transition: transform .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       &:hover {
         transform: rotate(0deg);
-        text-decoration: none;
       }
     }
     a:link, a:visited {
       font-size:11vw;
-      text-decoration: $secondary-color solid underline;
+      background-color: rgba($red, $green, $blue, .1);
+    }
+    a:hover {
+      color: lighten($primary-color, 10%);
     }
   }
 }
