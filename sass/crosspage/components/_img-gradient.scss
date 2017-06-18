@@ -1,0 +1,9 @@
+.img-gradient {
+  background: linear-gradient(to bottom, rgba($red,$green,$blue,.35) 0%,rgba($red,$green,$blue,0.7) 100%);
+  img {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    display: block;
+  }
+}

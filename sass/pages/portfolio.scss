@@ -22,99 +22,44 @@ aside {
   display: none;
 }
 
+// feature triangles
+.feature:nth-child(odd) {
+  &::after, &::before {
+    content: "";
+    position: absolute;
+    transition: all 3s ease-in-out;
+  }
+  &::after {
+    @include triangle(20vw, rgba($red,$green,$blue,0.3));
+    top: -20%;
+    right: -24%;
+    transform: rotate(40deg) skewX(10deg);
+  }
+  &::before {
+    @include triangle(70vw, rgba($red,$green,$blue,0.3));
+    bottom: -40%;
+    right: -80%;
+    transform: rotate(126deg) skewY(20deg);
+    z-index: -1;
+  }
+}
 
+.feature:nth-child(even) {
+  &::after, &::before {
+    content: "";
+    position: absolute;
 
-// .container {
-//   display: flex;
-//   background: #99d;
-//   aside {
-//     flex: 1;
-//     display: flex;
-//     flex-direction: column;
-//     margin: 10px;
-//   }
-//   main {
-//     flex: 3;
-//   }
-// }
-// .sidebar {
-//   background: inherit;
-//   nav {
-//     ul {
-//       background-color: lightblue;
-//       display: flex;
-//       flex-direction: column;
-//       padding: 10px;
-//       li {
-//         padding: 5px;
-//       }
-//     }
-//   }
-// }
-//
-// .link {
-//   min-height: 200px;
-//   background: lightyellow;
-//   margin: 10px 0;
-// }
-//
-// main {
-//   background: #dad;
-//   display: flex;
-//   flex-direction: column;
-//   height: 100vh;
-// }
-//
-// .jumbotron {
-//   background-color: navajowhite;
-//   display: flex;
-//   flex: 1;
-//   h1 {
-//     margin: auto;
-//     font-size: 8vw;
-//     font-family: 'Montserrat Subrayada', serif;
-//   }
-// }
-//
-// .features {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   overflow-x: hidden;
-//   flex: 6;
-// }
-//
-// .feature {
-//   max-width: 850px;
-//   height: 30vh;
-//   margin-bottom: 32vh;
-//   display: flex;
-//   align-items: center;
-//   position: relative;
-//   &:nth-child(odd) {
-//     .feature-text {
-//       transform: translateX(-50%);
-//     }
-//   }
-//   &:nth-child(even) {
-//     flex-direction: row-reverse;
-//     .feature-text {
-//       transform: translateX(50%);
-//     }
-//   }
-//   &:last-child {
-//     margin-bottom: 2vh;
-//   }
-//   img {
-//     height: 30vh;
-//   }
-//   .feature-text {
-//     text-align: center;
-//   }
-//   h2 {
-//     font-size: 3.5vmax;
-//   }
-//   p {
-//     font-size: 1.5vmax;
-//   }
-// }
+  }
+  &::after {
+    @include triangle(20vw, rgba($red,$green,$blue,0.1));
+    top: -20%;
+    left: -24%;
+    transform: rotate(30deg) skewX(10deg);
+  }
+  &::before {
+    @include triangle(10vw, rgba($red,$green,$blue,0.2));
+    top: -50%;
+    left: -5%;
+    transform: rotate(80deg) skewX(10deg);
+  }
+}
