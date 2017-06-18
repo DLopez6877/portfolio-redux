@@ -137,31 +137,11 @@ aside {
   }
 }
 
-footer{
-  background-color: darken($primary-color, 10%);
-  height: 100px;
-  text-align: center;
-  transform: skewY(-7deg);
-  order: 4;
+footer {
   margin-top: -100px;
-  img {
-    width: 28px;
-    padding: 10px 5px;
-  }
-  a, a:visited, a:link {
-    &:nth-child(n+4) {
-      color: lighten($primary-color, 30%);
-      padding: 5px 15px;
-    }
-  }
-  a:hover {
-    opacity: .6;
-    > * {
-      transform: scale(.8);
-    }
-  }
+  order: 4;
+  position: static;
 }
-
 // added divs from js
 .new {
   display: flex;

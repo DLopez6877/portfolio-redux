@@ -1,0 +1,29 @@
+footer {
+  background-color: darken($primary-color, 10%);
+  height: 100px;
+  text-align: center;
+  transform: skewY(-7deg);
+  position: fixed;
+  bottom: 7%;
+  width: 100%;
+  img {
+    width: 28px;
+    padding: 10px 5px;
+  }
+  a, a:visited, a:link {
+    &:nth-child(n+4) {
+      color: lighten($primary-color, 30%);
+      padding: 5px 15px;
+      @include respond-to('x-small') {
+        font-size: .9em;
+        padding: 5px 5px;
+      };
+    }
+  }
+  a:hover {
+    opacity: .6;
+    > * {
+      transform: scale(.8);
+    }
+  }
+}
