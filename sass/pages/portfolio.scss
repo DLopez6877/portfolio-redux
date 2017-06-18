@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   color: $primary-color;
+  overflow-x: hidden;
 }
 
 .jumbotron {
@@ -27,20 +28,17 @@ aside {
   &::after, &::before {
     content: "";
     position: absolute;
-    animation: triangle-enter 3s ease-in-out .5s normal forwards;
   }
   &::after {
     @include triangle(20vw, rgba($red,$green,$blue,0.3));
-    bottom: 0%;
-    right: -24%;
-    transform: rotate(120deg) skewX(10deg);
+    animation: right-triangle-enter 3s ease-in-out 1s normal forwards;
   }
   &::before {
-    @include triangle(50vw, rgba($red,$green,$blue,0.3));
-    top: -45%;
-    left: -60%;
-    transform: rotate(-61.5deg) skewY(40deg);
+    @include triangle(50vw, rgba($red2,$green2,$blue2,0.3));
+    animation: large-triangle-enter 1s linear  normal forwards;
     z-index: -1;
+    transform: rotate(-61.5deg) skewY(40deg);
+    top: -31%;
   }
 }
 
@@ -52,14 +50,12 @@ aside {
   }
   &::after {
     @include triangle(20vw, rgba($red,$green,$blue,0.1));
-    top: -20%;
-    left: -24%;
-    transform: rotate(30deg) skewX(10deg);
+    animation: left-triangle-enter 2s linear 2s normal forwards;
   }
   &::before {
-    @include triangle(10vw, rgba($red,$green,$blue,0.2));
+    @include triangle(9vw, rgba($red2,$green2,$blue2,0.2));
     bottom: -10%;
-    left: 0%;
-    transform: rotate(160deg) skewX(20deg);
+    left: 50%;
+    transform: rotate(210deg) skewX(3deg);
   }
 }

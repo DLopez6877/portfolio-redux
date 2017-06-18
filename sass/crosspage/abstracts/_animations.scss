@@ -1,8 +1,49 @@
-@keyframes triangle-enter {
+@keyframes large-triangle-enter {
+  from {
+    left: -220%;
+  }
+  to {
+    left: -48%;
+
+  }
+}
+
+@keyframes right-triangle-enter {
   from {
     opacity: 0;
+    right: -50%
   }
   to {
     opacity: 1;
+    bottom: -2%;
+    right: -24%;
+    transform: rotate(120deg) skewX(10deg);
+  }
+}
+
+
+@keyframes left-triangle-enter {
+  from {
+    opacity: 0;
+    top: 40%;
+    left: -90%;
+    transform: rotate(-228deg) skewX(0deg);
+  }
+  to {
+    opacity: 1;
+    top: -40%;
+    left: -15%;
+    transform: rotate(28deg) skewX(10deg);
+  }
+}
+
+@keyframes small-triangle-enter {
+  from {
+    opacity: 0;
+
+  }
+  to {
+    opacity: 1;
+
   }
 }
