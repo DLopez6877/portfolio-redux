@@ -18,6 +18,14 @@ footer {
         font-size: .9em;
         padding: 5px 5px;
       };
+      @include respond-to('large') {
+        font-size: 150%;
+        padding: 5px 20px;
+      };
+      @include respond-to('x-large') {
+        font-size: 200%;
+        padding: 5px 20px;
+      };
     }
   }
   a:hover {

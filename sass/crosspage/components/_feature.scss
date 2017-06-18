@@ -16,6 +16,9 @@
   @include respond-to('small') {
     width: 60%;
   };
+  @include respond-to('x-large') {
+    margin-top: 100px;
+  };
   position: relative;
   &:last-of-type {
     margin-bottom: 25px;
@@ -69,5 +72,13 @@
   box-shadow: 0 0 20px darken($primary-color, 20%);
   h2 {
     font-family: 'Orbitron';
+    @include respond-to('x-large') {
+      font-size: 3em;
+    };
+  }
+  p {
+    @include respond-to('x-large') {
+      font-size: 1.3em;
+    };
   }
 }

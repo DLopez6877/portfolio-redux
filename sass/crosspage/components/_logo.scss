@@ -16,7 +16,7 @@
     border-bottom: 3px solid darken($secondary-color, 10%);
   }
   p {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'Droid Serif', sans-serif;
     font-size: 30px;
     color: darken($secondary-color, 15%);
     @include respond-to('large') {

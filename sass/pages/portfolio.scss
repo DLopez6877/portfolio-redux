@@ -12,20 +12,27 @@ body {
   padding-bottom: 200px;
   @include respond-to('large') {
     flex-direction: row-reverse;
+    padding-bottom: 100px;
   };
 }
 
 .jumbotron {
   text-align: center;
   background: darken($primary-color, 10%);
-  font-family: 'Bungee Shade';
   color: lighten($primary-color, 50%);
   order: 1;
   display: flex;
   h1 {
-    font-size: 3em;
+    font-family: 'Montserrat Subrayada';
+    font-size: 3.6em;
     padding: .5em 0;
     margin: auto;
+    @include respond-to('x-small') {
+      font-size: 3em;
+    };
+    @include respond-to('large') {
+      font-size: 6vw;
+    };
   }
   @include respond-to('large') {
     min-height: 20vh;
@@ -45,6 +52,7 @@ aside {
   @include respond-to('large'){
     position: static;
     width: 100%;
+    @include blend-bg-img('../../img/gplaypattern.png');
   };
   ul {
     display: flex;
@@ -59,6 +67,7 @@ aside {
       transform: rotate(45deg);
       @include respond-to('large') {
         transform: none;
+        margin-bottom: 10vh;
       };
       @include respond-to('vertical') {
         transform: rotate(0deg);
@@ -70,6 +79,7 @@ aside {
       @include respond-to('large') {
         transform: none;
         align-self: flex-start;
+        margin-bottom: 10vh;
       };
       @include respond-to('vertical') {
         transform: none;
@@ -141,6 +151,9 @@ footer {
   margin-top: -100px;
   order: 4;
   position: static;
+  @include respond-to('large') {
+    transform: none;
+  };
 }
 // added divs from js
 .new {

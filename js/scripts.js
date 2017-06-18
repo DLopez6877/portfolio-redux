@@ -1,8 +1,8 @@
 function checkSize(){
-    if ($(window).width() >= 999 && $('.js-wrap').parent().is('.container')) {
+    if ($(window).width() >= 980 && $('.js-wrap').parent().is('.container')) {
         $('.js-wrap').wrapAll("<div class='new' />");
         $('.js-wrap2').wrapAll("<div class='new2' />");
-    } else if ($(window).width() < 999 && $('.js-wrap').parent().is('.new')) {
+    } else if ($(window).width() < 980 && $('.js-wrap').parent().is('.new')) {
       $('.js-wrap').unwrap();
       $('.js-wrap2').unwrap();
     }
