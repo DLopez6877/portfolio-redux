@@ -28,17 +28,18 @@ aside {
   &::after, &::before {
     content: "";
     position: absolute;
+    opacity: 0;
   }
   &::after {
     @include triangle(20vw, rgba($red,$green,$blue,0.3));
-    animation: right-triangle-enter 3s ease-in-out 1s normal forwards;
+    animation: right-triangle-enter 5s ease-in-out 1s normal forwards;
   }
   &::before {
     @include triangle(50vw, rgba($red2,$green2,$blue2,0.3));
-    animation: large-triangle-enter 1s linear  normal forwards;
+    animation: large-triangle-enter 6s linear  normal forwards;
     z-index: -1;
     transform: rotate(-61.5deg) skewY(40deg);
-    top: -31%;
+    opacity: 1;
   }
 }
 
@@ -46,16 +47,14 @@ aside {
   &::after, &::before {
     content: "";
     position: absolute;
-
+    opacity: 0;
   }
   &::after {
     @include triangle(20vw, rgba($red,$green,$blue,0.1));
-    animation: left-triangle-enter 2s linear 2s normal forwards;
+    animation: left-triangle-enter 5s linear 1s normal forwards;
   }
   &::before {
     @include triangle(9vw, rgba($red2,$green2,$blue2,0.2));
-    bottom: -10%;
-    left: 50%;
-    transform: rotate(210deg) skewX(3deg);
+    animation: small-triangle-enter 5s linear 1s normal forwards;
   }
 }

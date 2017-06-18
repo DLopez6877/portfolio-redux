@@ -1,49 +1,89 @@
-@keyframes large-triangle-enter {
+@keyframes opacity-enter {
   from {
-    left: -220%;
+    opacity: 0;
   }
   to {
-    left: -48%;
+    opacity: 1;
+  }
+}
 
+@keyframes large-triangle-enter {
+  0% {
+    left: -220%;
+    top: -44%;
+  }
+  10% {
+    left: -48%;
+  }
+  80% {
+    top: -44%;
+  }
+  100% {
+    left: -48%;
+    top: -31%;
   }
 }
 
 @keyframes right-triangle-enter {
-  from {
+  0% {
     opacity: 0;
-    right: -50%
+    bottom: -20%;
+    right: -100%;
+    transform: rotate(120deg) skewX(10deg) scale(2.5);
   }
-  to {
+  30%, 70% {
+    opacity: .5;
+    bottom: -30%;
+    right: -5%;
+    transform: rotate(120deg) skewX(10deg) scale(2.5);
+  }
+  100% {
     opacity: 1;
     bottom: -2%;
     right: -24%;
-    transform: rotate(120deg) skewX(10deg);
+    transform: rotate(120deg) skewX(10deg) scale(1);
   }
 }
 
 
 @keyframes left-triangle-enter {
-  from {
+  0% {
     opacity: 0;
-    top: 40%;
+    top: 80%;
     left: -90%;
-    transform: rotate(-228deg) skewX(0deg);
+    transform: rotate(28deg) skewX(0deg) scale(3);
   }
-  to {
+  30%, 70% {
+    opacity: .5;
+    top: -40%;
+    left: -15%;
+    transform: rotate(28deg) skewX(10deg) scale(3);
+  }
+  100% {
     opacity: 1;
     top: -40%;
     left: -15%;
-    transform: rotate(28deg) skewX(10deg);
+    transform: rotate(28deg) skewX(10deg) scale(1);
   }
 }
 
 @keyframes small-triangle-enter {
-  from {
+  0% {
     opacity: 0;
-
+    left: 100%;
+    bottom: 200%;
+    transform: rotate(210deg) skewX(0deg) scale(3);
   }
-  to {
+  30%, 70% {
+    opacity: .5;
+    bottom: -10%;
+    left: 50%;
+    transform: rotate(210deg) skewX(3deg) scale(3);
+  }
+  100% {
     opacity: 1;
-
+    bottom: -10%;
+    left: 50%;
+    transform: rotate(210deg) skewX(3deg) scaleX(1);
   }
 }
