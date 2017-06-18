@@ -1,4 +1,5 @@
 .img-gradient {
+    // animation: opacity-enter .4s ease-in-out 3.6s normal forwards;
     background: linear-gradient(to bottom, rgba($red,$green,$blue,.4) 0%,rgba($red2,$green2,$blue2,0.7) 100%);
     opacity: 0;
   img {

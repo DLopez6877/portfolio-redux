@@ -36,14 +36,8 @@
       transform: translate(-100%,-50%);
     }
   }
-}
-
-.img-gradient {
-  img {
-    width: 100%;
-    position: relative;
-    z-index: -1;
-    display: block;
+  a:hover > .img-gradient > img {
+    z-index: 0 !important;
   }
 }
 
