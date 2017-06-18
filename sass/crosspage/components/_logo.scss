@@ -5,9 +5,18 @@
   align-items: center;
   padding: 10px 10px;
   border-bottom: 4px solid darken($secondary-color, 10%);
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    border-bottom: 3px solid darken($secondary-color, 10%);
+  }
   p {
-    font-family: 'Tangerine Bold', fantasy;
+    font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 30px;
-    color: darken($secondary-color, 15%)
+    color: darken($secondary-color, 15%);
   }
 }
