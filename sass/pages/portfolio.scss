@@ -1,11 +1,15 @@
 @import
   "../crosspage/main";
 
+body {
+  background-color: lighten($primary-color, 50%);
+}
 .container {
   display: flex;
   flex-direction: column;
   color: $primary-color;
-  overflow-x: hidden;
+  overflow: hidden;
+  padding-bottom: 200px;
 }
 
 .jumbotron {
@@ -56,5 +60,30 @@ aside {
   &::before {
     @include triangle(9vw, rgba($red2,$green2,$blue2,0.2));
     animation: small-triangle-enter 5s linear 1s normal forwards;
+  }
+}
+
+footer{
+  margin-top: -50px;
+  background-color: darken($primary-color, 10%);
+  height: 100px;
+  text-align: center;
+  transform: skewY(-7deg);
+  img {
+    width: 28px;
+    padding: 10px 5px;
+  }
+  a, a:visited, a:link {
+    &:nth-child(n+4) {
+      color: lighten($primary-color, 30%);
+      padding: 5px 15px;
+    }
+  }
+  a:hover {
+    opacity: .6;
+    font-size: .8em;
+    > * {
+      transform: scale(.8);
+    }
   }
 }
