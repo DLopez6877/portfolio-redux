@@ -1,7 +1,17 @@
 .img-gradient {
-    // animation: opacity-enter .4s ease-in-out 3.6s normal forwards;
+  opacity: 0;
+  z-index: -1;
+  position: relative;
+
+  .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
     background: linear-gradient(to bottom, rgba($red,$green,$blue,.4) 0%,rgba($red2,$green2,$blue2,0.7) 100%);
     opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
   img {
     width: 100%;
     position: relative;

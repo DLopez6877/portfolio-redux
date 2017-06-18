@@ -10,13 +10,18 @@ $(document).ready(function(){
   $('.img-gradient')
   .delay(3000)
   .queue(function (next) {
-    $(this).css('opacity', '1');
+    $(this).animate({'opacity': 1}, 500);
     next();
   });
-  $('.js-img-gradient')
-  .delay(4000)
-  .queue(function (next) {
-    $(this).css('z-index', '-1');
-    next();
-  });
+  setTimeout(function() {
+    $('.gradient').each(function() {
+      $(this).animate({'opacity': 1}, 1500);
+    });
+  }, 4000);
+  // $('.js-img-gradient')
+  // .delay(4000)
+  // .queue(function (next) {
+  //   $(this).css('z-index', '-1');
+  //   next();
+  // });
 });

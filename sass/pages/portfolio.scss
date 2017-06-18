@@ -35,9 +35,26 @@ aside {
   ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    a {
-      font-size: 11vw;
+    justify-content: space-around;
+    height: 100vh;
+    text-align: center;
+    li:nth-child(odd) {
+      transform: rotate(45deg);
+    }
+    li:nth-child(even) {
+      transform: rotate(-45deg);
+      align-self: flex-end;
+    }
+    li {
+      transition: transform .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      &:hover {
+        transform: rotate(0deg);
+        text-decoration: none;
+      }
+    }
+    a:link, a:visited {
+      font-size:11vw;
+      text-decoration: $secondary-color solid underline;
     }
   }
 }

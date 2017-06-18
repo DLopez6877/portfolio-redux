@@ -11,6 +11,7 @@
   align-items: flex-start;
   justify-content: center;
   width: 80%;
+  position: relative;
   @include respond-to('small') {
     width: 60%;
   };
