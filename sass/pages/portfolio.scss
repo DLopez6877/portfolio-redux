@@ -27,19 +27,19 @@ aside {
   &::after, &::before {
     content: "";
     position: absolute;
-    transition: all 3s ease-in-out;
+    animation: triangle-enter 3s ease-in-out .5s normal forwards;
   }
   &::after {
     @include triangle(20vw, rgba($red,$green,$blue,0.3));
-    top: -20%;
+    bottom: 0%;
     right: -24%;
-    transform: rotate(40deg) skewX(10deg);
+    transform: rotate(120deg) skewX(10deg);
   }
   &::before {
-    @include triangle(70vw, rgba($red,$green,$blue,0.3));
-    bottom: -40%;
-    right: -80%;
-    transform: rotate(126deg) skewY(20deg);
+    @include triangle(50vw, rgba($red,$green,$blue,0.3));
+    top: -45%;
+    left: -60%;
+    transform: rotate(-61.5deg) skewY(40deg);
     z-index: -1;
   }
 }
@@ -58,8 +58,8 @@ aside {
   }
   &::before {
     @include triangle(10vw, rgba($red,$green,$blue,0.2));
-    top: -50%;
-    left: -5%;
-    transform: rotate(80deg) skewX(10deg);
+    bottom: -10%;
+    left: 0%;
+    transform: rotate(160deg) skewX(20deg);
   }
 }
