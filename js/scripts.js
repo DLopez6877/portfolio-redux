@@ -1,6 +1,11 @@
 $(document).ready(function(){
   $(".hamburger").click(function(){
     $(this).toggleClass("is-active");
+    if ($(this).hasClass("is-active")) {
+      $('aside').css('left', '0');
+    } else {
+      $('aside').css('left', '-50%');
+    }
   });
   $('.img-gradient')
   .delay(3000)

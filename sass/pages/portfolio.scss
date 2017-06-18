@@ -24,7 +24,22 @@ body {
 }
 
 aside {
-  display: none;
+  transition: left .5s cubic-bezier(1,.24,.23,1);
+  position: fixed;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background-color: lighten(rgba($red2, $green2, $blue2, .8), 50%);
+  z-index: 100;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    a {
+      font-size: 11vw;
+    }
+  }
 }
 
 // feature triangles
