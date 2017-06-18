@@ -1,2 +1,10 @@
 @import
   "crosspage/main";
+body {
+  overflow: hidden;
+}
+.container {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
