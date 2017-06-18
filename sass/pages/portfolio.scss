@@ -60,7 +60,7 @@ aside {
       @include respond-to('large') {
         transform: none;
       };
-      @media screen and (max-height: 750px) {
+      @include respond-to('vertical') {
         transform: rotate(0deg);
       }
     }
@@ -70,6 +70,9 @@ aside {
       @include respond-to('large') {
         transform: none;
         align-self: flex-start;
+      };
+      @include respond-to('vertical') {
+        transform: none;
       };
     }
     li {
@@ -84,7 +87,7 @@ aside {
       margin: 0 -500px;
       background-color: rgba($red, $green, $blue, .1);
       @include respond-to('small') {
-        font-size: 8vw;
+        font-size: 7.8vw;
       };
     }
     a:hover {
