@@ -67,7 +67,6 @@ aside {
       transform: rotate(45deg);
       @include respond-to('large') {
         transform: none;
-        margin-bottom: 10vh;
       };
       @include respond-to('vertical') {
         transform: rotate(0deg);
@@ -79,7 +78,6 @@ aside {
       @include respond-to('large') {
         transform: none;
         align-self: flex-start;
-        margin-bottom: 10vh;
       };
       @include respond-to('vertical') {
         transform: none;
@@ -116,14 +114,14 @@ aside {
   }
   &::after {
     @include triangle(20vw, rgba($red,$green,$blue,0.3));
-    animation: right-triangle-enter 5s ease-in-out 1s normal forwards;
+    animation: right-triangle-enter 3s ease-in-out .3s normal forwards;
     @include respond-to('small') {
-      animation: right-triangle-media 5s ease-in-out 1s normal forwards;
+      animation: right-triangle-media 2s ease-in-out .3s normal forwards;
     };
   }
   &::before {
     @include triangle(50vw, rgba($red2,$green2,$blue2,0.3));
-    animation: large-triangle-enter 6s linear  normal forwards;
+    animation: large-triangle-enter 3s linear normal forwards;
     z-index: -1;
     transform: rotate(-61.5deg) skewY(40deg);
     opacity: 1;
@@ -139,11 +137,11 @@ aside {
   }
   &::after {
     @include triangle(20vw, rgba($red,$green,$blue,0.1));
-    animation: left-triangle-enter 5s linear 1s normal forwards;
+    animation: left-triangle-enter 2s linear .3 normal forwards;
   }
   &::before {
     @include triangle(9vw, rgba($red2,$green2,$blue2,0.2));
-    animation: small-triangle-enter 5s linear 1s normal forwards;
+    animation: small-triangle-enter 2s linear .3 normal forwards;
   }
 }
 

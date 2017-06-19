@@ -1,8 +1,6 @@
 .img-gradient {
   opacity: 0;
-  z-index: -1;
   position: relative;
-
   .gradient {
     position: absolute;
     top: 0;
@@ -15,7 +13,10 @@
   img {
     width: 100%;
     position: relative;
-    z-index: 0;
+    z-index: 1;
     display: block;
+    @include respond-to('medium') {
+      z-index: 0;
+    };
   }
 }

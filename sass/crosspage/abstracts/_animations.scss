@@ -29,9 +29,9 @@
     opacity: 0;
     bottom: -20%;
     right: -100%;
-    transform: rotate(120deg) skewX(10deg) scale(2.5);
+    transform: rotate(320deg) skewX(10deg) scale(2.5);
   }
-  30%, 70% {
+  50%, 80% {
     opacity: .5;
     bottom: -30%;
     right: -5%;
@@ -50,9 +50,9 @@
     opacity: 0;
     bottom: -20%;
     right: -100%;
-    transform: rotate(120deg) skewX(10deg) scale(2.5);
+    transform: rotate(320deg) skewX(10deg) scale(2.5);
   }
-  30%, 70% {
+  50%, 90% {
     opacity: .5;
     bottom: -30%;
     right: -5%;
@@ -71,9 +71,9 @@
     opacity: 0;
     top: 80%;
     left: -90%;
-    transform: rotate(28deg) skewX(0deg) scale(3);
+    transform: rotate(228deg) skewX(0deg) scale(3);
   }
-  30%, 70% {
+  50%, 80% {
     opacity: .5;
     top: -40%;
     left: -15%;
@@ -92,9 +92,9 @@
     opacity: 0;
     left: 100%;
     bottom: 200%;
-    transform: rotate(210deg) skewX(0deg) scale(3);
+    transform: rotate(410deg) skewX(0deg) scale(3);
   }
-  30%, 70% {
+  50%, 80% {
     opacity: .5;
     bottom: -10%;
     left: 50%;

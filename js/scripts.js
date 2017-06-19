@@ -22,7 +22,7 @@ $(document).ready(function(){
   });
   // gradient timing functions
   $('.img-gradient')
-  .delay(3000)
+  .delay(1300)
   .queue(function (next) {
     $(this).animate({'opacity': 1}, 500);
     next();
@@ -31,7 +31,7 @@ $(document).ready(function(){
     $('.gradient').each(function() {
       $(this).animate({'opacity': 1}, 1500);
     });
-  }, 4000);
+  }, 3300);
   // wrap logo and sidebar at width 1000px
   checkSize();
 
