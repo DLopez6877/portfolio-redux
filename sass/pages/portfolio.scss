@@ -136,11 +136,11 @@ aside {
     pointer-events: none;
   }
   &::after {
-    @include triangle(20vw, rgba($red,$green,$blue,0.1));
+    @include triangle(20vw, rgba($red,$green,$blue,0.3));
     animation: left-triangle-enter 2s linear .3 normal forwards;
   }
   &::before {
-    @include triangle(9vw, rgba($red2,$green2,$blue2,0.2));
+    @include triangle(9vw, rgba($red2,$green2,$blue2,0.4));
     animation: small-triangle-enter 2s linear .3 normal forwards;
   }
 }

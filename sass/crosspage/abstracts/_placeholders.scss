@@ -3,3 +3,8 @@
   content: "";
   clear: both;
 }
+
+%box-shadow {
+  box-shadow: 0 0 30px $secondary-color;
+  transition: box-shadow .2s linear;
+}
