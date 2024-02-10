@@ -1,3 +1,6 @@
+This is my first portfolio out of code school. What can I say... I'm nostalgic ¯\_(ツ)_/¯
+---
+
 # _Portfolio_
 
 #### _Portfolio, 5/26/2017_
